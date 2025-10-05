@@ -2,11 +2,12 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>計算補助ツール</title>
+<title>計算サポートツール</title>
 <style>
   body { font-family: "Segoe UI", sans-serif; background: #f7f7f7; margin: 40px; }
-  .container { background: white; padding: 20px 30px; border-radius: 10px; max-width: 600px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-  h1 { text-align: center; color: #333; }
+  .container { background: white; padding: 20px 30px; border-radius: 10px; max-width: 600px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin: 0 auto; }
+  h1 { text-align: center; color: #333; margin-top: 10px; }
+  .logo { display: block; margin: 0 auto 10px auto; max-width: 200px; height: auto; }
   label { display: block; margin-top: 10px; font-weight: bold; }
   select, input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
   input:disabled { background: #e9e9e9; color: #666; }
@@ -18,7 +19,11 @@
 </head>
 <body>
 <div class="container">
-  <h1>電圧降下計算ツール</h1>
+
+  <!-- 三協アルミ ロゴ -->
+  <img src="三協アルミ_4C透過.png" alt="三協アルミロゴ" class="logo">
+
+  <h1>計算サポートツール</h1>
 
   <label>使用電圧</label>
   <select id="voltage">
@@ -28,13 +33,13 @@
 
   <label>ケーブル太さ（sq）</label>
   <select id="cable">
-    <option value="1.25">1.25sq（※φ7.5）</option>
-    <option value="2.0">2.0sq（※φ9.5 24Vのみ有効）</option>
+    <option value="1.25">1.25sq</option>
+    <option value="2.0">2.0sq（※24Vのみ有効）</option>
   </select>
 
   <label>計算したい項目</label>
   <select id="calcType">
-    <option value="drop">❶ 電圧降下（V_drop）</option>
+    <option value="drop">❶ 電圧降下（V）</option>
     <option value="distance">❷ 使用可能距離（m）</option>
     <option value="watt">❸ 使用可能W数（W）</option>
   </select>
